@@ -1,0 +1,1133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mabry Pro";
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff9ec;
+  color: #ff3227;
+}
+
+#loader {
+  height: 100vh;
+  width: 100%;
+  background-color: #ff3227;
+  position: absolute;
+  z-index: 9999;
+}
+
+#nav {
+  height: 3.8vw;
+  width: 100%;
+  padding: 0.9vw 1.5vw;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  background-color: #fff9ec;
+}
+
+#nav img {
+  height: 2.1vw;
+  width: 5.9vw;
+  margin-left: 42.8vw;
+  margin-right: 33.85vw;
+}
+
+#nav h4 {
+  font-size: 0.9vw;
+  line-height: 1;
+  letter-spacing: -0.015vw;
+  font-weight: 1000;
+}
+
+#nav h4 i {
+  font-size: 1.1vw;
+  line-height: 1;
+  letter-spacing: -0.015vw;
+  font-weight: 1000;
+  margin-left: 0.6vw;
+}
+
+#main {
+  /* width: 100%;
+    height: 100%; */
+  /* As we are applying Locomotive Js */
+  background-color: #fff9ec;
+  color: #ff3227;
+}
+
+#page1 {
+  min-height: 150vh;
+  width: 100%;
+  position: relative;
+}
+
+#page1 #page1-part1 {
+  /* Because we want this part to be below the 2nd part */
+  position: absolute;
+  height: 130vh;
+  width: 100%;
+}
+
+#page1 #page1-part1 img {
+  width: 125%;
+  margin-left: -12vw;
+  margin-top: -12vw;
+}
+
+#page1 #page1-part1 #page1-part1-bottom {
+  position: absolute;
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  /* background-color: antiquewhite; */
+  /* so it comes above the pictures */
+  z-index: 9;
+}
+
+#page1 #page1-part1 #page1-part1-bottom h4 {
+  font-size: 5.19vw;
+  line-height: 1;
+}
+
+#page1 #page1-part1 #page1-part1-bottom h4:nth-child(1) {
+  margin-left: -2vw;
+}
+
+#page1 #page1-part1 #page1-part1-bottom h4:nth-child(2) {
+  margin-top: -12vw;
+  margin-left: 15vw;
+  margin-right: 8.4vw;
+}
+
+#page1 #page1-part1 #page1-part1-bottom h4:nth-child(3) {
+  margin-top: 18.6vw;
+  margin-right: 19.9vw;
+}
+
+#page1 #page1-part1 #page1-part1-bottom h4:nth-child(4) {
+  margin-top: 10vw;
+}
+
+#page1 #page1-part2 {
+  /* so it gets above the part1 */
+  position: absolute;
+  height: 130vh;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#page1 #page1-part2 .strip {
+  /* this is for the strip div containing img */
+  width: 31.5%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5vw;
+}
+
+#page1 #page1-part2 .strip img {
+  /* can't give height 100% then it will take all the div height */
+  width: 100%;
+  object-fit: cover;
+}
+
+#page1 #page1-part2 #center {
+  /* initially gave it larger width, then will decrease it using scrollTrigger*/
+  width: 42%;
+  height: 88%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  overflow: hidden;
+  z-index: 1;
+  /* for the coming up effect */
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+#page1 #page1-part2 #center img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* will decrease the scale with javascript */
+  transform: scale(2.4);
+  transform-origin: center 36%;
+  z-index: 1;
+}
+
+#page1 #page1-part2 #center-bottom-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -7%;
+  width: 33.5%;
+  height: 14vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page1 #page1-part2 #left {
+  transform: translateY(120%);
+}
+
+#page1 #page1-part2 #right {
+  transform: translateY(-120%);
+}
+
+#page1 #page1-part2 #left img:nth-child(1) {
+  height: 38.9vw;
+}
+
+#page1 #page1-part2 #left img:nth-child(2) {
+  height: 21vw;
+}
+
+#page1 #page1-part2 #right img:nth-child(2) {
+  height: 21vw;
+}
+
+#page1 #page1-part2 #right img:nth-child(2) {
+  height: 38.9vw;
+}
+
+#page2 {
+  min-height: 140vh;
+  width: 100%;
+  padding: 0vw 2.7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.1vw;
+}
+
+#page2 #page2-line1 {
+  width: 100%;
+  height: 9vw;
+  /* background-color: salmon; */
+  text-align: right;
+}
+
+#page2 #page2-line1 img {
+  height: 75%;
+}
+
+#page2 #page2-line2 {
+  width: 100%;
+  height: 9vw;
+  /* background-color: salmon; */
+  display: flex;
+  gap: 1vw;
+}
+
+#page2 #page2-line2 h3 {
+  font-size: 9vw;
+  line-height: 1;
+  margin-top: -1.8vw;
+}
+
+#page2 #page2-line2 img {
+  height: 75%;
+}
+
+#page2 #page2-line3 {
+  width: 100%;
+  height: 9vw;
+  /* background-color: salmon; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+#page2 #page2-line3 h3 {
+  font-size: 9vw;
+  line-height: 1;
+  margin-top: -1.8vw;
+}
+
+#page2 #page2-text {
+  margin-top: 12.9vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page2 #page2-text h2 {
+  color: #ebdcd1;
+  font-size: 2.5vw;
+  line-height: 1;
+  position: relative;
+}
+
+#page2 #page2-text h2::before {
+  content: "CUE WIGS";
+  color: #ff3227;
+  font-size: 0.7vw;
+  line-height: 1.1;
+  letter-spacing: -0.015vw;
+  margin-right: 11.6vw;
+  /* background-color: darkkhaki; */
+}
+
+#page3 {
+  height: 100vh;
+  width: 100%;
+  background-color: #ff3227;
+  color: #fff;
+  padding: 6.4vw 2.7vw;
+}
+
+#page3 .page3-text {
+  height: fit-content;
+  overflow: hidden;
+  /* background-color: aqua; */
+}
+
+#page3 h4 {
+  font-size: 9vw;
+  line-height: 1;
+  letter-spacing: -0.272vw;
+}
+
+#page4 {
+  height: 100vh;
+  width: 100%;
+  background-color: #ff3227;
+  color: #fff;
+  margin-top: -0.8vw;
+}
+
+#page4 #page4-wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 4vw 0 1vw 3vw;
+  display: flex;
+  gap: 2vw;
+}
+
+#page4 #page4-wrapper #page4-part1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+#page4 #page4-wrapper #page4-part1 #page4-part1-left {
+  height: 100%;
+  width: 64%;
+  /* background-color: darkturquoise; */
+}
+
+#page4 #page4-wrapper #page4-part1 #page4-part1-left #page4-part1-left-top {
+  height: 33%;
+  /* background-color: darkgoldenrod; */
+}
+
+#page4 #page4-wrapper #page4-part1 #page4-part1-left #page4-part1-left-top h3 {
+  font-size: 2.5vw;
+  line-height: 1;
+  width: 93%;
+}
+
+#page4
+  #page4-wrapper
+  #page4-part1
+  #page4-part1-left
+  #page4-part1-left-top
+  h3::before {
+  content: "CUE WIGS";
+  color: #fff;
+  font-size: 0.7vw;
+  line-height: 1.1;
+  letter-spacing: -0.015vw;
+  margin-right: 10.7vw;
+  /* background-color: darkkhaki; */
+  margin-top: 0.5vw;
+  float: inline-start;
+}
+
+#page4 #page4-wrapper #page4-part1 #page4-part1-left #page4-part1-left-bottom {
+  height: 67%;
+  /* background-color: darkolivegreen; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#page4
+  #page4-wrapper
+  #page4-part1
+  #page4-part1-left
+  #page4-part1-left-bottom
+  #page4-part1-left-bottom-left {
+  display: flex;
+  flex-direction: column;
+  gap: 31vw;
+}
+
+#page4
+  #page4-wrapper
+  #page4-part1
+  #page4-part1-left
+  #page4-part1-left-bottom
+  #page4-part1-left-bottom-right {
+  height: 100%;
+  width: 44%;
+  background: url(./images/page4-img1.webp);
+  background-size: cover;
+}
+
+#page4 #page4-wrapper #page4-part1 #page4-part1-right {
+  height: 100%;
+  width: 34%;
+  /* background-color: darksalmon; */
+  background: url(./images/page4-img2.webp);
+  background-size: cover;
+}
+
+#page4 #page4-wrapper #page4-part2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+#page4 #page4-wrapper #page4-part2 #page4-part2-left {
+  height: 100%;
+  width: 35%;
+  /* background-color: darkorange; */
+}
+
+#page4 #page4-wrapper #page4-part2 #page4-part2-left #page4-part2-left-top h3 {
+  font-size: 2.5vw;
+  line-height: 1;
+  width: 93%;
+}
+
+#page4
+  #page4-wrapper
+  #page4-part2
+  #page4-part2-left
+  #page4-part2-left-top
+  h3::before {
+  content: "CUE WIGS";
+  color: #fff;
+  font-size: 0.7vw;
+  line-height: 1.1;
+  letter-spacing: -0.015vw;
+  margin-right: 10.7vw;
+  /* background-color: darkkhaki; */
+  margin-top: 0.5vw;
+  float: inline-start;
+}
+
+#page4 #page4-wrapper #page4-part2 #page4-part2-left #page4-part2-left-bottom {
+  margin-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 24.2vw;
+}
+
+#page4 #page4-wrapper #page4-part2 #page4-part2-right {
+  height: 100%;
+  width: 63%;
+  /* background-color: peru; */
+  display: flex;
+  align-items: flex-start;
+  gap: 2vw;
+}
+
+#page4
+  #page4-wrapper
+  #page4-part2
+  #page4-part2-right
+  #page4-part2-right-top-left {
+  height: 33vw;
+  width: 26vw;
+  /* background-color: beige; */
+  background: url(./images/page4-img3.webp);
+  background-size: cover;
+}
+
+#page4
+  #page4-wrapper
+  #page4-part2
+  #page4-part2-right
+  #page4-part2-right-img-right {
+  width: 34.2vw;
+  height: 100%;
+  /* background-color: blueviolet; */
+  background: url(./images/page4-img4.webp);
+  background-size: cover;
+}
+
+#page4 #page4-wrapper #page4-part3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+#page4 #page4-wrapper #page4-part3 #page4-part3-left {
+  height: 100%;
+  width: 64%;
+  /* background-color: darkturquoise; */
+}
+
+#page4 #page4-wrapper #page4-part3 #page4-part3-left #page4-part3-left-top {
+  height: 33%;
+  /* background-color: darkgoldenrod; */
+}
+
+#page4 #page4-wrapper #page4-part3 #page4-part3-left #page4-part3-left-top h3 {
+  font-size: 2.5vw;
+  line-height: 1;
+  width: 93%;
+}
+
+#page4
+  #page4-wrapper
+  #page4-part3
+  #page4-part3-left
+  #page4-part3-left-top
+  h3::before {
+  content: "CUE WIGS";
+  color: #fff;
+  font-size: 0.7vw;
+  line-height: 1.1;
+  letter-spacing: -0.015vw;
+  margin-right: 10.7vw;
+  /* background-color: darkkhaki; */
+  margin-top: 0.5vw;
+  float: inline-start;
+}
+
+#page4 #page4-wrapper #page4-part3 #page4-part3-left #page4-part3-left-bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2vw;
+}
+
+#page4
+  #page4-wrapper
+  #page4-part3
+  #page4-part3-left
+  #page4-part3-left-bottom
+  #page4-part3-left-bottom-left {
+  width: 30vw;
+  height: 60.9vh;
+  background: url(./images/page4-img5.webp);
+  background-size: cover;
+}
+
+#page4
+  #page4-wrapper
+  #page4-part3
+  #page4-part3-left
+  #page4-part3-left-bottom
+  #page4-part3-left-bottom-right {
+  width: 64%;
+  display: flex;
+  flex-direction: column;
+  gap: 23.9vw;
+}
+
+#page4
+  #page4-wrapper
+  #page4-part3
+  #page4-part3-left
+  #page4-part3-left-bottom
+  #page4-part3-left-bottom-right
+  p {
+  width: 97%;
+}
+
+#page4 #page4-wrapper #page4-part3 #page4-part3-right {
+  height: 100%;
+  width: 34%;
+  background: url(./images/page4-img6.webp);
+  background-size: cover;
+}
+
+#page4-spacer {
+  height: 13vw;
+  background-color: #ff3227;
+  margin-top: -0.8vw;
+}
+
+#page5 {
+  height: 100vh;
+  width: 100%;
+  padding: 7vw 3vw;
+}
+
+#page5 .page5-text {
+  /* background-color: darkgreen; */
+  overflow: hidden;
+}
+
+#page5 h1 {
+  color: #ff3227;
+  font-size: 9vw;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.3vw;
+}
+
+#page5 #page5-line2 {
+  display: flex;
+  gap: 2vw;
+  margin-top: 0.8vw;
+  /* background-color: darkgreen; */
+  overflow: hidden;
+}
+
+#page5 #page5-line2 img {
+  margin-top: 1.5vw;
+}
+
+.page-same {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff9ec;
+  padding: 0 3vw;
+  display: flex;
+  align-items: center;
+  color: #ff3227;
+}
+
+/* elem is in a vertical order */
+.page-same .elem {
+  width: 50%;
+  height: 125vh;
+  /* background-color: darkorange; */
+}
+
+.page-same .elem:nth-child(1) {
+  padding-right: 2vw;
+  /* background-color: darkmagenta ; */
+}
+
+.page-same .elem h2 {
+  font-size: 2.5vw;
+  /* background-color: beige; */
+  line-height: 1;
+  margin-bottom: 1.1vw;
+}
+
+.page-same .elem:nth-child(2) h2 {
+  margin: 8vw 0 0;
+  /* background-color: aquamarine; */
+  margin-bottom: 1.1vw;
+}
+
+.page-same .elem:nth-child(1) h2::before {
+  content: "01";
+  font-size: 0.7vw;
+  line-height: 0.9vw;
+  letter-spacing: -0.015vw;
+  margin-right: 10.3vw;
+  margin-top: 0.5vw;
+  float: inline-start;
+}
+
+.page-same .elem:nth-child(2) h2::before {
+  content: "02";
+  font-size: 0.7vw;
+  line-height: 0.9vw;
+  letter-spacing: -0.015vw;
+  margin-right: 10.3vw;
+  margin-top: 0.5vw;
+  float: inline-start;
+}
+
+.page-same .elem:nth-child(1) h5 {
+  margin-top: 20vw;
+  margin-bottom: 1.5vw;
+  /* background-color: aqua; */
+}
+
+.page-same .elem:nth-child(1) img {
+  width: 65%;
+  object-fit: cover;
+}
+
+#page6 .elem:nth-child(1) img {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+#page6 .elem:nth-child(2) img {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.page-same .elem:nth-child(2) img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#page7 {
+  position: relative;
+  height: 150vh;
+  width: 100%;
+  background-color: #fff9ec;
+  padding: 8vw 2vw;
+}
+
+#page7 #page7-svg {
+  width: 70%;
+  transform: translateX(70%);
+}
+
+#page7 #page7-img {
+  width: 60%;
+  height: 40vw;
+  object-fit: cover;
+  /* so that it comes above the svg */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#page7 h1 {
+  /* so they comes above the img */
+  position: absolute;
+  color: #ff3227;
+  font-size: 5vw;
+  font-weight: 600;
+}
+
+#page7 h1:nth-child(4) {
+  top: 55%;
+  left: 15%;
+}
+
+#page7 h1:nth-child(5) {
+  top: 65%;
+  right: 5%;
+}
+
+#page8 .elem:nth-child(1) h2::before {
+  content: "03";
+  font-size: 0.7vw;
+  line-height: 0.9vw;
+  letter-spacing: -0.015vw;
+  margin-right: 10.3vw;
+  margin-top: 0.5vw;
+  float: inline-start;
+}
+
+#page8 .elem:nth-child(2) h2::before {
+  content: "04";
+  font-size: 0.7vw;
+  line-height: 0.9vw;
+  letter-spacing: -0.015vw;
+  margin-right: 10.3vw;
+  margin-top: 0.5vw;
+  float: inline-start;
+}
+
+#page8 .elem:nth-child(1) img {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+#page8 .elem:nth-child(2) img {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+#page9 {
+  height: 120vh;
+  width: 100%;
+  background-color: #fff9ec;
+  padding: 10vw 3vw;
+  display: flex;
+}
+
+#page9 #page9-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ff3227;
+}
+
+#page9 #page9-right {
+  width: 50%;
+  height: 100%;
+}
+
+#page9 h2 {
+  font-size: 2.5vw;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 1.1vw;
+  width: 95%;
+}
+
+#page9 h2::before {
+  content: "05";
+  font-size: 0.7vw;
+  line-height: 0.9vw;
+  letter-spacing: -0.015vw;
+  margin-right: 10.3vw;
+  margin-top: 0.5vw;
+  float: inline-start;
+}
+
+#page9 #page9-left {
+  padding-right: 2vw;
+}
+
+#page9 #page9-right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+#underline {
+  padding-top: 2.7vw;
+  margin-left: 2.7vw;
+  width: 93.6%;
+  border-top: 1px solid #ff3227;
+}
+
+#underline h5 {
+  color: #ff3227;
+  font-size: 1vw;
+  line-height: 1.2vw;
+  font-weight: 100;
+}
+
+#page10 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-top: 6.4vw;
+  padding: 0 2.7vw;
+}
+
+#page10 .page10-text {
+  height: fit-content;
+  overflow: hidden;
+}
+
+#page10 .page10-text:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 1.8vw;
+}
+
+#page10 .page10-text h1 {
+  font-size: 9vw;
+  line-height: 1;
+}
+
+#page10 .page10-text img {
+  width: 18%;
+  margin-top: 1.4vw;
+}
+
+#page10 #page10-bottom {
+  margin-top: 13.4vw;
+  padding: 2vw 0;
+  border-top: 1px solid #ff3227;
+  border-bottom: 1px solid #ff3227;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.7vw;
+}
+
+#page10 #page10-bottom .page10-bottom-text {
+  overflow: hidden;
+  /* background-color: darkorange; */
+  height: 3.1vw;
+}
+
+#page10 #page10-bottom .page10-bottom-text h2 {
+  font-size: 2.7vw;
+  line-height: 1;
+  cursor: pointer;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.7s;
+}
+
+#page10 #page10-bottom .page10-bottom-text:hover h2 {
+  transform: translateY(-100%);
+}
+
+#page11 {
+  min-height: 110vh;
+  width: 100%;
+  background-color: #ff3227;
+  color: #fff;
+  padding-top: 6.4vw;
+  padding-bottom: 4vw;
+  padding-left: 2.7vw;
+  padding-right: 2.7vw;
+}
+
+#page11 .page11-text {
+  height: fit-content;
+  overflow: hidden;
+}
+
+#page11 .page11-text h1 {
+  font-size: 9vw;
+  line-height: 1;
+  letter-spacing: -0.272vw;
+}
+
+#page11 #page11-img-container {
+  width: 100%;
+  height: 110vh;
+  margin-top: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#page11 #page11-img-container .img-div {
+  width: 32%;
+  height: 100%;
+}
+
+#page11 #page11-img-container .img-div .img {
+  width: 30vw;
+  height: 45.7vw;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#page11 #page11-img-container .img-div h2 {
+  text-transform: uppercase;
+  font-size: 2.5vw;
+  margin-top: 2vw;
+}
+
+#page11 #page11-img-container .img-div .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.5s;
+}
+
+#page11 #page11-img-container .img-div .img:hover img {
+  transform: scale(1.1);
+}
+
+#page11 #page11-img-bottom-text {
+  margin-top: 5vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 27.7vw;
+}
+
+#page11 #page11-img-bottom-text h5 {
+  font-size: 0.84vw;
+  line-height: 1.2vw;
+  letter-spacing: -0.015vw;
+  position: relative;
+  cursor: pointer;
+}
+
+#page11 #page11-img-bottom-text h5::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  bottom: -0.6vw;
+  background-color: #fff;
+}
+
+#page12 {
+  height: 100vh;
+  width: 100%;
+  /* for the slides */
+  display: flex;
+}
+
+#page12 .page12-slide {
+  height: 100vh;
+  width: fit-content;
+  /* for each img */
+  display: flex;
+  animation-name: slide;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#page12 .page12-slide img {
+  /* so they retain their size */
+  flex-shrink: 0;
+  width: 50vw;
+  height: 100%;
+  object-fit: cover;
+  /* display: none; */
+}
+
+#page12 #page12-bottom-text {
+  /* margin-top: 62.7vw; */
+  color: #ff3227;
+  width: 100%;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#page13 {
+  height: 60vh;
+  width: 100%;
+  position: relative;
+  padding: 2.7vw;
+}
+
+#page13 #page13-top-text h5 {
+  color: #ff3227;
+  font-size: 0.77vw;
+  line-height: 1.2vw;
+  letter-spacing: -0.015vw;
+  cursor: pointer;
+}
+
+#page13 #page13-center-text {
+  margin-top: 6.4vw;
+  color: #ebdcd1;
+}
+
+#page13 #page13-center-text h1 {
+  font-size: 5.18vw;
+  line-height: 5.98vw;
+}
+
+#page14 {
+  height: 113vh;
+  width: 100%;
+  padding-top: 6.5vw;
+  padding-left: 2.7vw;
+  padding-right: 2.7vw;
+}
+
+#page14 .page14-location {
+  padding-top: 1.5vw;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 2.08vw;
+  display: flex;
+  gap: 20vw;
+  border-top: 0.8px solid #ff3227;
+}
+
+#page14 .page14-location:nth-child(2) {
+  border-bottom: 0.8px solid #ff3227;
+}
+
+#page14 .page14-location .page14-location-left {
+  height: 100%;
+  width: 45.11vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12.3vw;
+  /* background-color: pink; */
+}
+
+#page14 .page14-location .page14-location-left h2 {
+  font-size: 2.6vw;
+  line-height: 1;
+  color: #ff3227;
+  /* background-color: aqua; */
+}
+
+#page14 .page14-location .page14-location-left .page14-location-left-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.4vw;
+}
+
+#page14
+  .page14-location
+  .page14-location-right
+  .page14-location-right-img-container {
+  width: 31.4vw;
+  height: 20.7vw;
+  background-color: salmon;
+}
+
+#page14
+  .page14-location
+  .page14-location-right
+  .page14-location-right-img-container
+  img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#page15 {
+  height: 65vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#page15 img {
+  position: absolute;
+  top: -35%;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 100%;
+  scale: 1.09;
+}
+
+#page15 #page15-bottom {
+  margin-left: 2.7vw;
+  margin-right: 2.7vw;
+  padding-bottom: 2.7vw;
+  padding-top: 2.7vw;
+  border-top: 0.8px solid #ff3227;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* as img has absolute position */
+  margin-top: 30vw;
+}
+
+#page15 #page15-bottom h5 {
+  font-size: 0.8vw;
+  line-height: 1;
+}
