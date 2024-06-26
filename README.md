@@ -1,0 +1,2 @@
+# Cuw Wigs
+ Frontend clone of Cuewigs’ stylish website, featuring a harmonious blend of vibrant colors, elegant typography, and meticulously positioned elements. Crafted using HTML for structural layout, CSS for sophisticated styling and subtle animations, and JavaScript with GSAP, ScrollTrigger, Locomotive Scroll, and custom scroll-based animations for fluid navigation and dynamic user interactions.
